@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import ShopPage from '../components/ShopPage';
+import Footer from '../components/Footer';
+---
+
+<Layout>
+	<Navbar client:load />
+	<main>
+		<ShopPage client:load />
+	</main>
+	<Footer client:visible />
+</Layout>

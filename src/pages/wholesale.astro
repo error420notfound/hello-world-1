@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { Building2, Coffee, Truck, MessageSquare } from 'lucide-react';
+---
+
+<Layout>
+	<Navbar client:load />
+	<main class="pt-32 pb-24 px-6 md:px-12 bg-white">
+		<div class="max-w-7xl mx-auto space-y-24">
+			<header class="max-w-3xl space-y-8">
+				<h1 class="text-6xl md:text-9xl font-serif tracking-tight leading-[0.9]">
+					Wholesale <br /> <span class="italic">Partnerships</span>.
+				</h1>
+				<p class="text-[#1a1a1a]/60 text-xl md:text-2xl leading-relaxed font-light">
+					We supply the most discerning third-wave coffee shops in India with fresh-roast beans, technical expertise, and barista training.
+				</p>
+			</header>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-24 py-12">
+				<div class="space-y-12">
+					<div class="space-y-6">
+						<div class="w-16 h-16 bg-[#e2d9c8]/20 rounded-3xl flex items-center justify-center text-[#1a1a1a]">
+							<Coffee size={32} />
+						</div>
+						<h3 class="text-3xl font-serif">Uncompromising Quality</h3>
+						<p class="text-[#1a1a1a]/60 leading-relaxed font-light">
+							Our beans are sourced directly from the highest altitude estates in Karnataka and beyond, roasted with precision for the best flavor profiles.
+						</p>
+					</div>
+					<div class="space-y-6">
+						<div class="w-16 h-16 bg-[#e2d9c8]/20 rounded-3xl flex items-center justify-center text-[#1a1a1a]">
+							<Truck size={32} />
+						</div>
+						<h3 class="text-3xl font-serif">Seamless Delivery</h3>
+						<p class="text-[#1a1a1a]/60 leading-relaxed font-light">
+							Reliable logistics ensuring your shop never runs out of fresh stock. We deliver all over India with priority handling for wholesale partners.
+						</p>
+					</div>
+				</div>
+
+				<div class="bg-[#faf9f6] p-12 rounded-[2.5rem] space-y-10 border border-[#1a1a1a]/5 shadow-sm">
+					<h3 class="text-4xl font-serif">Inquire for Bulk</h3>
+					<form class="space-y-6">
+						<div class="space-y-2">
+							<label class="text-[10px] font-bold tracking-widest uppercase opacity-40">Shop Name</label>
+							<input type="text" placeholder="The Morning Brew" class="w-full bg-transparent border-b border-[#1a1a1a]/10 py-3 focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+						</div>
+						<div class="space-y-2">
+							<label class="text-[10px] font-bold tracking-widest uppercase opacity-40">Contact Email</label>
+							<input type="email" placeholder="hello@shop.com" class="w-full bg-transparent border-b border-[#1a1a1a]/10 py-3 focus:outline-none focus:border-[#1a1a1a] transition-colors" />
+						</div>
+						<div class="space-y-2">
+							<label class="text-[10px] font-bold tracking-widest uppercase opacity-40">Monthly Volume</label>
+							<select class="w-full bg-transparent border-b border-[#1a1a1a]/10 py-3 focus:outline-none focus:border-[#1a1a1a] transition-colors appearance-none">
+								<option>Under 20kg</option>
+								<option>20kg - 50kg</option>
+								<option>Over 50kg</option>
+							</select>
+						</div>
+						<button class="w-full bg-[#1a1a1a] text-white py-5 rounded-full text-base font-medium hover:scale-105 transition-transform shadow-lg shadow-[#1a1a1a]/10">
+							Submit Inquiry
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<Footer client:visible />
+</Layout>
