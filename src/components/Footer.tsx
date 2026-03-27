@@ -35,7 +35,7 @@ const Footer = () => {
               { label: 'Contact', href: '#' }
             ].map((item) => (
               <li key={item.label}>
-                <a href={item.href.startsWith('#') ? item.href : `${base}${item.href}`} className="text-lg hover:opacity-60 transition-opacity flex items-center group">
+                <a href={item.href.startsWith('#') ? item.href : `${base}/${item.href}`} className="text-lg hover:opacity-60 transition-opacity flex items-center group">
                   {item.label}
                   <ArrowUpRight size={16} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>

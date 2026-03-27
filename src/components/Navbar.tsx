@@ -24,7 +24,7 @@ const Navbar = () => {
           {['Shop', 'Wholesale', 'Story', 'Brewing'].map((item) => (
             <a 
               key={item} 
-              href={`${base}${item.toLowerCase()}`}
+              href={`${base}/${item.toLowerCase()}`}
               className="text-sm font-medium tracking-wide text-[#1a1a1a]/60 hover:text-[#1a1a1a] transition-colors relative group"
             >
               {item}
@@ -61,7 +61,7 @@ const Navbar = () => {
             {['Shop', 'Wholesale', 'Story', 'Brewing'].map((item) => (
               <a 
                 key={item} 
-                href={`${base}${item.toLowerCase()}`}
+                href={`${base}/${item.toLowerCase()}`}
                 className="text-xl font-serif text-[#1a1a1a]"
                 onClick={() => setIsOpen(false)}
               >
