@@ -52,7 +52,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-8"
         >
           <motion.a 
-            href={`${base}shop`}
+            href={`${base}/shop`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="group flex items-center space-x-3 bg-[#1a1a1a] text-white px-8 py-4 rounded-full text-base font-medium transition-shadow hover:shadow-2xl hover:shadow-[#1a1a1a]/20"
@@ -62,7 +62,7 @@ const Hero = () => {
           </motion.a>
           
           <motion.a 
-            href={`${base}wholesale`}
+            href={`${base}/wholesale`}
             whileHover={{ x: 5 }}
             className="text-sm font-semibold tracking-widest uppercase text-[#1a1a1a] flex items-center group py-4 px-8 border border-transparent hover:border-[#1a1a1a]/10 rounded-full transition-all"
           >

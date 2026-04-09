@@ -15,7 +15,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-[#faf9f6]/80 backdrop-blur-md border-b border-[#1a1a1a]/5 px-6 py-4 md:px-12"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href={base} className="text-2xl font-serif tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity">
+        <a href={`${base}/`} className="text-2xl font-serif tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity">
           Midnight Pulse
         </a>
 
