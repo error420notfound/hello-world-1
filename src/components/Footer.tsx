@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL;
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1a1a1a] text-[#faf9f6] px-6 py-24 md:px-12">
+    <footer className="bg-[#1a1a1a] px-6 py-24 pb-36 text-[#faf9f6] md:px-12 md:pb-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-24">
         {/* Brand Section */}
         <div className="md:col-span-2 space-y-8">
