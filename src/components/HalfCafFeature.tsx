@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Zap, ArrowRight } from 'lucide-react';
+import { withBase } from '../utils/paths';
 
 const HalfCafFeature = () => {
   return (
@@ -51,13 +51,14 @@ const HalfCafFeature = () => {
             </div>
           </div>
 
-          <motion.button 
+          <motion.a 
+            href={withBase('/shop')}
             whileHover={{ x: 10 }}
             className="flex items-center space-x-4 text-sm font-semibold tracking-[0.2em] uppercase text-[#e2d9c8] pt-8 group"
           >
             <span>Pre-order now</span>
             <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <motion.div 

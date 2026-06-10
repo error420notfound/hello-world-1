@@ -1,6 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Building2, PackageCheck, Award, MessageSquareQuote } from 'lucide-react';
+import { withBase } from '../utils/paths';
 
 const WholesaleSection = () => {
   return (
@@ -81,12 +81,12 @@ const WholesaleSection = () => {
           <div className="relative z-10 flex flex-col items-center text-center space-y-10">
             <h3 className="text-4xl md:text-6xl font-serif tracking-tight italic">Ready to fuel your community?</h3>
             <div className="flex flex-col sm:flex-row items-center gap-6">
-              <button className="bg-[#1a1a1a] text-white px-10 py-5 rounded-full text-base font-medium hover:scale-105 transition-transform shadow-lg shadow-[#1a1a1a]/20">
+              <a href={withBase('/wholesale')} className="bg-[#1a1a1a] text-white px-10 py-5 rounded-full text-base font-medium hover:scale-105 transition-transform shadow-lg shadow-[#1a1a1a]/20">
                 Inquire for Wholesale
-              </button>
-              <button className="px-10 py-5 rounded-full text-base font-medium border border-[#1a1a1a]/10 hover:bg-[#1a1a1a]/5 transition-colors">
+              </a>
+              <a href={withBase('/wholesale')} className="px-10 py-5 rounded-full text-base font-medium border border-[#1a1a1a]/10 hover:bg-[#1a1a1a]/5 transition-colors">
                 Request Samples
-              </button>
+              </a>
             </div>
           </div>
           {/* Decorative background circle */}

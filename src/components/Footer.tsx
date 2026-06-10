@@ -1,7 +1,5 @@
-import React from 'react';
 import { Instagram, Twitter, Facebook, ArrowUpRight } from 'lucide-react';
-
-const base = import.meta.env.BASE_URL;
+import { withBase } from '../utils/paths';
 
 const Footer = () => {
   return (
@@ -28,14 +26,14 @@ const Footer = () => {
           <h3 className="text-sm font-medium tracking-[0.2em] uppercase text-[#faf9f6]/40">Explore</h3>
           <ul className="space-y-4">
             {[
-              { label: 'Shop All', href: 'shop' },
-              { label: 'Bulk Orders', href: 'wholesale' },
-              { label: 'Our Story', href: 'story' },
-              { label: 'Brewing Guides', href: 'brewing' },
+              { label: 'Shop All', href: '/shop' },
+              { label: 'Bulk Orders', href: '/wholesale' },
+              { label: 'Our Story', href: '/story' },
+              { label: 'Brewing Guides', href: '/brewing' },
               { label: 'Contact', href: '#' }
             ].map((item) => (
               <li key={item.label}>
-                <a href={item.href.startsWith('#') ? item.href : `${base}/${item.href}`} className="text-lg hover:opacity-60 transition-opacity flex items-center group">
+                <a href={item.href.startsWith('#') ? item.href : withBase(item.href)} className="text-lg hover:opacity-60 transition-opacity flex items-center group">
                   {item.label}
                   <ArrowUpRight size={16} className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
